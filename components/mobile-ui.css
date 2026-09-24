@@ -1,0 +1,49 @@
+.mobile-tab-strip,
+.mobile-card-carousel,
+.mobile-table-region {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.mobile-tab-strip,
+.mobile-card-carousel {
+  overscroll-behavior-x: contain;
+}
+
+.mobile-table-region {
+  overscroll-behavior-y: auto;
+  overscroll-behavior-x: auto;
+}
+
+.mobile-tab-strip > *,
+.mobile-card-carousel > * {
+  scroll-snap-align: start;
+}
+
+.mobile-scroll-hint {
+  display: none;
+  font-size: 0.6875rem;
+  line-height: 1rem;
+  color: #64748b;
+}
+
+@media (max-width: 767px) {
+  .mobile-tab-strip,
+  .mobile-card-carousel {
+    scroll-snap-type: x proximity;
+  }
+
+  .mobile-tab-strip {
+    margin-inline: -0.25rem;
+    padding-inline: 0.25rem;
+  }
+
+  .mobile-scroll-hint {
+    display: block;
+  }
+
+  .mobile-table-region {
+    overscroll-behavior-x: contain;
+    overscroll-behavior-y: auto;
+  }
+}

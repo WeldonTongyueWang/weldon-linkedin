@@ -1,0 +1,128 @@
+.inventory-ui {
+  --inv-bg: #f8fafc;
+  --inv-surface: #ffffff;
+  --inv-surface-soft: #f1f5f9;
+  --inv-border: #cbd5e1;
+  --inv-border-strong: #94a3b8;
+  --inv-text: #0f172a;
+  --inv-text-soft: #475569;
+  --inv-primary: #4f46e5;
+  --inv-primary-hover: #4338ca;
+  --inv-danger: #dc2626;
+  --inv-danger-hover: #b91c1c;
+}
+
+.inventory-ui button {
+  font-weight: 600;
+  border-radius: 0.5rem;
+}
+
+.inventory-ui button.inventory-subtab-button {
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.inventory-ui button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.inventory-ui input,
+.inventory-ui select,
+.inventory-ui textarea {
+  border-color: var(--inv-border);
+  color: var(--inv-text);
+}
+
+.inventory-ui input::placeholder,
+.inventory-ui textarea::placeholder {
+  color: #94a3b8;
+}
+
+.inventory-ui input:focus,
+.inventory-ui select:focus,
+.inventory-ui textarea:focus {
+  border-color: #818cf8;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.18);
+  outline: none;
+}
+
+.inventory-ui input:disabled,
+.inventory-ui select:disabled,
+.inventory-ui textarea:disabled,
+.inventory-ui input[readonly],
+.inventory-ui select[readonly],
+.inventory-ui textarea[readonly] {
+  background-color: var(--inv-surface-soft);
+  color: #64748b;
+}
+
+.inventory-ui table {
+  color: var(--inv-text-soft);
+}
+
+.inventory-ui table thead {
+  background: #f8fafc;
+  color: #475569;
+}
+
+.inventory-ui table thead th {
+  border-color: #e2e8f0;
+}
+
+.inventory-ui table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.inventory-ui button[class*="bg-indigo-600"][class*="text-white"],
+.inventory-ui button[class*="bg-blue-600"][class*="text-white"] {
+  background-color: var(--inv-primary);
+  border-color: var(--inv-primary);
+}
+
+.inventory-ui button[class*="bg-indigo-600"][class*="text-white"]:hover,
+.inventory-ui button[class*="bg-blue-600"][class*="text-white"]:hover {
+  background-color: var(--inv-primary-hover);
+  border-color: var(--inv-primary-hover);
+}
+
+.inventory-ui button[class*="bg-red-600"][class*="text-white"] {
+  background-color: var(--inv-danger);
+  border-color: var(--inv-danger);
+}
+
+.inventory-ui button[class*="bg-red-600"][class*="text-white"]:hover {
+  background-color: var(--inv-danger-hover);
+  border-color: var(--inv-danger-hover);
+}
+
+.inventory-ui [class*="bg-green-"][class*="text-green-"] {
+  background-color: #dcfce7 !important;
+  color: #166534 !important;
+  border-color: #86efac !important;
+}
+
+.inventory-ui [class*="bg-red-"][class*="text-red-"] {
+  background-color: #fee2e2 !important;
+  color: #991b1b !important;
+  border-color: #fca5a5 !important;
+}
+
+.inventory-ui [class*="bg-orange-"][class*="text-orange-"] {
+  background-color: #ffedd5 !important;
+  color: #9a3412 !important;
+  border-color: #fdba74 !important;
+}
+
+.inventory-ui [class*="bg-blue-"][class*="text-blue-"] {
+  background-color: #dbeafe !important;
+  color: #1e40af !important;
+  border-color: #93c5fd !important;
+}
+
+.inventory-ui [class*="bg-indigo-"][class*="text-indigo-"] {
+  background-color: #e0e7ff !important;
+  color: #3730a3 !important;
+  border-color: #a5b4fc !important;
+}
