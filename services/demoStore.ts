@@ -1,6 +1,6 @@
 import { createDemoDatabase, type DemoDatabase } from '../data/fixtures';
 
-export const STORAGE_KEY = 'weldon-linkedin:demo:v1';
+export const STORAGE_KEY = 'weldon-linkedin:demo:v2';
 
 type StoreListener = () => void;
 type StoreUpdater = (draft: DemoDatabase) => void | DemoDatabase;
@@ -13,7 +13,7 @@ const clone = <T,>(value: T): T => {
 };
 
 const normalizeDatabase = (value: Partial<DemoDatabase>): DemoDatabase => ({
-  schemaVersion: Number(value.schemaVersion) || 1,
+  schemaVersion: Number(value.schemaVersion) || 2,
   items: Array.isArray(value.items) ? value.items : [],
   products: Array.isArray(value.products) ? value.products : [],
   recipes: Array.isArray(value.recipes) ? value.recipes : [],

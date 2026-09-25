@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Layers, Database, Archive, Factory, RefreshCcw, User } from 'lucide-react';
+import { Layers, Database, Archive, Factory, RefreshCcw, Settings, User } from 'lucide-react';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -44,6 +44,7 @@ export const Layout: React.FC<LayoutProps> = ({
     { id: 'master', label: 'Master Data', icon: Database },
     { id: 'inventory', label: 'Inventory Manager', icon: Archive },
     { id: 'manufacturing', label: 'Manufacturing Planning', icon: Layers },
+    { id: 'settings', label: 'Settings', icon: Settings },
   ];
 
   // Filter based on permissions

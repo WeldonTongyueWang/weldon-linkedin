@@ -12,6 +12,7 @@ import { Layout } from './components/Layout';
 import { MasterDataView } from './components/MasterDataView';
 import { InventoryManagerView } from './components/inventory/InventoryManagerView';
 import { ManufacturingPlanningView } from './components/ManufacturingPlanningView';
+import { SettingsView } from './components/SettingsView';
 import { useAppDialog } from './components/ui/AppDialogProvider';
 import {
   DEMO_OPEN_POS,
@@ -53,9 +54,9 @@ import type {
   UserRole,
 } from './types';
 
-type AppTab = 'master' | 'inventory' | 'manufacturing';
+type AppTab = 'master' | 'inventory' | 'manufacturing' | 'settings';
 
-const APP_TABS: AppTab[] = ['master', 'inventory', 'manufacturing'];
+const APP_TABS: AppTab[] = ['master', 'inventory', 'manufacturing', 'settings'];
 const DEMO_ROLE: UserRole = 'ADMIN';
 
 const normalizeText = (value: unknown): string => String(value ?? '').trim();
@@ -820,6 +821,10 @@ const App: React.FC = () => {
           settings={appSettings}
         />
       );
+    }
+
+    if (activeTab === 'settings') {
+      return <SettingsView />;
     }
 
     return (

@@ -1,10 +1,11 @@
 # Weldon Manufacturing Ltd — Manufacturing Management Demo
 
-A public, self-contained demonstration of a manufacturing management interface. This edition preserves the original application's UI patterns, forms, and workflow logic while limiting the scope to three areas:
+A public, self-contained demonstration of a manufacturing management interface. This edition preserves the original application's UI patterns, forms, and workflow logic across three operational areas plus a department-access preview:
 
 - Master Data
 - Inventory Management
 - Manufacturing Planning
+- Settings
 
 Every record in this repository is synthetic. Product families and formulations are fictional, ingredient names use chemical-element names, and all people, suppliers, orders, lots, batches, costs, and quantities are demonstration data.
 
@@ -34,6 +35,14 @@ Every record in this repository is synthetic. Product families and formulations 
 - Mid-term Scheduling
 - Exploratory Costing
 - Locally saved planning reports
+
+### Settings
+
+- Illustrative access profiles for Operations, Quality, R&D, Process Engineer,
+  Mechanical Engineer, Inventory, Procurement, and Finance
+- Read-only top-level and sub-tab permission previews
+- No emails, accounts, invitations, sign-in, or registration
+- Profiles demonstrate a production access model without restricting this public demo
 
 ## Local demo architecture
 
@@ -84,7 +93,8 @@ For least privilege, attach a dedicated runtime service account with no access t
 ## Repository structure
 
 ```text
-components/    Preserved views, forms, and navigation for the three demo sections
+components/    Preserved views, forms, navigation, and department access preview
+config/        Synthetic department profiles and local UI compatibility rules
 data/          Synthetic seed fixtures
 masterdata/    Product-family and raw-component registries
 services/      Local business rules and browser-storage adapter

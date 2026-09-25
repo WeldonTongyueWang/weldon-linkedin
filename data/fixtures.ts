@@ -27,7 +27,7 @@ export interface DemoDatabase {
   planningReports: PlanningReport[];
 }
 
-export const DEMO_USER = 'demo.user@weldon.invalid';
+export const DEMO_USER = 'Operations';
 
 const isoDaysFromToday = (days: number, hour = 9): string => {
   const value = new Date();
@@ -518,7 +518,7 @@ export const createDemoDatabase = (): DemoDatabase => {
   const products = buildProducts();
   const rawComponentLots = buildRawLots();
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     items,
     products,
     recipes: buildRecipes(),
